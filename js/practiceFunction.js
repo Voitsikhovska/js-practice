@@ -48,3 +48,23 @@ function findMaxNumber(a,b,c,d) {
   }
 }
 findMaxNumber(1,4,6,23);
+
+//task3
+function fib(count) {
+ let result ='';
+ let first = 0;
+ let second = 1;
+  for (let i = 0;i<count;i++ ){
+if(i+1===count){
+  result+=`${first}`;
+}
+else{
+  result+=`${first} `
+}
+let third = first + second;
+first=second;
+second = third;
+  }
+  return console.log(result)
+}
+fib(5)
