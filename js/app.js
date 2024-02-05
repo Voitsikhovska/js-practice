@@ -27,7 +27,7 @@ function rememberMyFilms(){
     }
   }
 }
-rememberMyFilms();
+//rememberMyFilms();
 
 function detectPersonalLevel(){
   if(personalMovieDB.count<10){
@@ -41,7 +41,7 @@ function detectPersonalLevel(){
   else {alert('error')}
   console.log(personalMovieDB);
 }
-detectPersonalLevel();
+//detectPersonalLevel();
 function showMyDB(hidden){
   if(!hidden){
     console.log(personalMovieDB) ;
@@ -54,7 +54,35 @@ function writeYourGenres(variable){
  }
 
 }
-writeYourGenres()
+//writeYourGenres()
+
+function calculateVolumeAndArea(length) {
+  if(typeof(length) !== 'number'||length<0||!Number.isInteger(length)){
+console.log('error');
+  }
+  let area,volume =0;
+area = 6 * Math.pow(length,2);
+volume =  Math.pow(length,3);
+
+return`area : ${area}, volume: ${volume};`
+
+}
+calculateVolumeAndArea(5);
+
+
+function getCoupeNumber(number) {
+if(typeof(number)!=='number'||number<0||!Number.isInteger(number)){
+  console.log('error');
+}
+if(number === 0 || number>36){
+  console.log('no place')
+}
+return console.log(Math.ceil(number/4));
+}
+
+getCoupeNumber(-5);
+
+
 /*const lines = 5;
 let result = '';
 
