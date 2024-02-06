@@ -63,3 +63,40 @@ function standartizeString(array){
   }
 }
 standartizeString(favoriteCities)
+
+ //task3
+const someString = 'This is some strange string';
+
+function reverse(str) {
+  if (typeof(str) !== 'string') {
+    return "error!";
+  }
+
+/* it's optimal solution
+ return str.split('').reverse().join('');*/
+
+let strin='';
+for (let i=str.length-1;i>=0;i--){
+  strin+=str[i];
+}
+console.log(strin)
+}
+reverse(someString)
+
+
+//task4
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+function availableCurr(arr, missingCurr) {
+let str='';
+arr.length === 0 ? str='No available currencies' : str='Available currencies'
+  for (let i=0; i<arr.length;i++){
+    if(arr[i]===missingCurr){
+      continue;
+    }
+    str+=`\n ${arr[i]} `;
+  }
+  console.log(str)
+}
+availableCurr(additionalCurrencies,'UAH')
